@@ -79,7 +79,7 @@ The MariaDB data directory `/var/lib/mysql` was either deleted or never initiali
    sudo chmod 750 /var/lib/mysql
    ```
 3. Confirmed the correct initialization command
-    ````bash
+    ```bash
     ls /usr/bin | grep maria
     ```
     ![confirmed initialized command](./images/confirmed_initialized_command.png)
@@ -102,7 +102,7 @@ The MariaDB data directory `/var/lib/mysql` was either deleted or never initiali
   ```bash
   systemctl status mariadb
   ```
-  ![success start](./images/success_start.png.png)
+  ![success start](./images/success_start.png)
   ```
   Active: active (running)
   ```
@@ -117,7 +117,7 @@ The MariaDB data directory `/var/lib/mysql` was either deleted or never initiali
   ```bash
   mysql -u root -p -e "SHOW DATABASES;"
   ```
-  ![confirmed running database](./images/confirmed_running_database.png.png)
+  ![confirmed running database](./images/confirmed_running_database.png)
 
 ---
 
