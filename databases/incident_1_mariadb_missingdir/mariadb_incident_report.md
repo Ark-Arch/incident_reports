@@ -38,16 +38,20 @@ The MariaDB data directory `/var/lib/mysql` was either deleted or never initiali
    ```bash
    systemctl status mariadb
    ```
-   ![systemctl status report](databases\incident_1_mariadb_missingdir\images\systemctl_status.png)
+   ![systemctl start report](./images/systemctl_start.png)
+   ![systemctl status report](./images/systemctl_status.png)
 2. Reviewed logs in journalctl for MariaDB:
    ```bash
    journalctl -xeu mariadb
    ```
+   ![journalctl -xeu report 1](./images/journalctl_xeu_report_1.png)
+   ![journalctl -xeu report 2](./images/journalctl_xeu_report_2.png)
 3. Checked for where the datadir files is located from the database config file in the /etc folder:
    ```bash
    grep -R "datadir" /etc/my.cnf /etc/mysql
    # result: /etc/my.cnf.d/mariadb-server.cnf:datadir=/var/lib/mysql
    ```
+   ![finding_data_dir](./images/finding_data_dir.png)
 3. Verified data directory existence, contents, ownership and permissions:
    ```bash
    ls -ld /var/lib/mysql
