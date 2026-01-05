@@ -3,6 +3,6 @@
 
 
 
-![success start](image.png)
+
 
 ![confirmed running database](image.png)

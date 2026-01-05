@@ -82,6 +82,7 @@ The MariaDB data directory `/var/lib/mysql` was either deleted or never initiali
     ````bash
     ls /usr/bin | grep maria
     ```
+    ![confirmed initialized command](./images/confirmed_initialized_command.png)
 
 3. Initialized system tables using the MariaDB-provided tool:
    ```bash
@@ -101,6 +102,7 @@ The MariaDB data directory `/var/lib/mysql` was either deleted or never initiali
   ```bash
   systemctl status mariadb
   ```
+  ![success start](./images/success_start.png.png)
   ```
   Active: active (running)
   ```
@@ -115,6 +117,7 @@ The MariaDB data directory `/var/lib/mysql` was either deleted or never initiali
   ```bash
   mysql -u root -p -e "SHOW DATABASES;"
   ```
+  ![confirmed running database](./images/confirmed_running_database.png.png)
 
 ---
 
